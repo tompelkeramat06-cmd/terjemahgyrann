@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08131f"><title>LINGUA — Egyptian Live Interpreter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div>
+<main class="shell">
+<header class="topbar"><a class="brand"><span class="logo">L</span><span>LINGUA<small>EGYPTIAN LIVE INTERPRETER</small></span></a><div class="status"><i></i> ARABIC EGYPTIAN ↔ INDONESIAN</div></header>
+<section class="hero"><div class="eyebrow">SPEAK NATURALLY · UNDERSTAND CLEARLY</div><h1>Language has<br><em>no borders.</em></h1><p>Penerjemah percakapan Amiyah Mesir dan bahasa Indonesia dengan input mikrofon.</p></section>
+<section class="app">
+<div class="app-head"><div><small>TRANSLATION WORKSPACE</small><h2>Interpreter studio</h2></div><span class="ready" id="statusPill">● SIAP</span></div>
+<div class="mode-tabs">
+<button class="mode active" data-mode="live">◉ &nbsp;Mode Live</button>
+<button class="mode" data-mode="conversation">⇄ &nbsp;Mode Percakapan</button>
+</div>
+<div class="mode-description" id="modeDescription">Satu arah: dengarkan Amiyah Mesir dan tampilkan terjemahan Indonesia secara bertahap.</div>
+<div class="language-strip"><div><span>🇪🇬</span><section><small>BAHASA SUMBER</small><b id="sourceLanguage">Amiyah Mesir</b></section></div><strong>⇄</strong><div><span>🇮🇩</span><section><small>BAHASA TUJUAN</small><b id="targetLanguage">Indonesia</b></section></div></div>
+<div class="live-controls" id="liveControls">
+<button class="mic-main" id="liveMic"><span>🎙</span></button><b id="liveTitle">Mulai mendengarkan</b><p id="liveHint">Tekan mikrofon, lalu biarkan lawan bicara berbicara dalam Amiyah Mesir.</p>
+<div class="bars" id="liveBars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+<div class="conversation-controls hidden" id="conversationControls">
+<div class="speaker-card egypt"><div><span>🇪🇬</span><section><b>Orang Mesir</b><small>Amiyah Mesir → Indonesia</small></section></div><button id="egyptMic">🎙 Mulai bicara</button></div>
+<div class="speaker-card indo"><div><span>🇮🇩</span><section><b>Kamu</b><small>Indonesia → Amiyah Mesir</small></section></div><button id="indoMic">🎙 Mulai bicara</button></div>
+<p class="conversation-tip">Gunakan mikrofon secara bergantian. Hentikan satu pembicara sebelum memulai pembicara berikutnya.</p>
+</div>
+<div class="results" id="liveResults">
+<article><header><span>ع</span> AMIYAH MESIR <button class="copy" data-copy="sourceText">⧉</button></header><div class="arabic" id="sourceText" dir="rtl">الكلام المصري سيظهر هنا...</div><small id="sourceFoot">Menunggu suara</small></article>
+<article class="translation"><header><span>文</span> INDONESIA <button class="copy" data-copy="targetText">⧉</button></header><div class="translated" id="targetText">Terjemahan bahasa Indonesia akan muncul di sini...</div><small id="targetFoot">Hasil terjemahan</small></article>
+</div>
+<div class="conversation-results hidden" id="conversationResults">
+<div class="chat-title">RIWAYAT PERCAKAPAN <button id="clearChat" class="text-button">Bersihkan</button></div>
+<div id="chatLog" class="chat-log"><div class="empty">Hasil percakapan akan muncul di sini.</div></div>
+</div>
+<div class="bottom-actions"><button id="clearBtn">⌫ Bersihkan hasil</button><button id="speakBtn">🔊 Dengarkan terjemahan</button><button id="downloadBtn">↓ Unduh transkrip</button></div>
+<div class="notice" id="notice">✦ Izinkan akses mikrofon dan pastikan internet aktif.</div>
+</section>
+<section class="tips"><div><b>01 · IZINKAN MIC</b><p>Gunakan Chrome atau Edge dan tekan Allow saat diminta.</p></div><div><b>02 · BICARA BERGANTIAN</b><p>Di mode percakapan, pilih mikrofon sesuai bahasa pembicara.</p></div><div><b>03 · PERIKSA HASIL</b><p>Dialek, kebisingan, dan kecepatan bicara dapat memengaruhi akurasi.</p></div></section>
+<footer>LINGUA <span>·</span> MADE FOR EVERY CONVERSATION</footer>
+</main><script src="app.js"></script>
+</body></html>
